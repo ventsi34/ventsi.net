@@ -1,0 +1,21 @@
+{
+  "name": "ventsi.net",
+  "version": "1.0.0",
+  "description": "Personal portfolio page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ventsi34/ventsi.net.git"
+  },
+  "author": "Ventsislav Dimitrov",
+  "license": "ISC",
+  "homepage": "https://github.com/ventsi34/ventsi.net#readme",
+  "dependencies": {
+    "gatsby": "^2.20.23",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
