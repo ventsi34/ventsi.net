@@ -1,4 +1,24 @@
 import React from 'react';
+import { Layout, SocialMenu } from '../components';
+
 import './index.scss';
 
-export default () => <h1>Hello Ventsi!</h1>;
+export default () => (
+  <Layout>
+    <div className="home-content-wrapper">
+      <div className="text-wrapper">
+        <p className="congrats">Hello, I&apos;m</p>
+        <h1>
+          Ventsislav
+          <br />
+          Dimitrov
+        </h1>
+        <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <SocialMenu />
+      </div>
+      <div className="image-wrapper">
+        <img src="../../../images/ventsi-main-image.png" alt="Ventsislav Dimitrov" />
+      </div>
+    </div>
+  </Layout>
+);

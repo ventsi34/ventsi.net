@@ -1,3 +1,44 @@
-h1 {
-    color: red;
+@import '../styles/variables';
+
+.home-content-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text-wrapper {
+  width: 45%;
+  order: 1;
+  align-self: center;
+
+  h1 {
+    color: $color-2;
+    padding: 0;
+    margin: 0;
+    font-size: 11rem;
+    line-height: 11rem;
+  }
+}
+
+.congrats {
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  margin: 0;
+  padding: 2rem 0 0;
+}
+
+.image-wrapper {
+  order: 2;
+  align-self: flex-end;
+  padding-right: 4rem;
+
+  img {
+    width: auto;
+    padding-bottom: 4rem;
+    max-height: calc(100vh - #{$header-height} - 5rem);
+  }
 }

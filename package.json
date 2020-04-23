@@ -4,6 +4,8 @@
   "description": "Personal portfolio page",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
+    "build": "gatsby build",
     "dev": "gatsby develop",
     "lint": "eslint src --ext .js,.jsx",
     "lint-fix": "eslint --fix src --ext .js,.jsx",
@@ -19,7 +21,9 @@
   "dependencies": {
     "gatsby": "^2.20.23",
     "gatsby-plugin-sass": "^2.2.3",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
