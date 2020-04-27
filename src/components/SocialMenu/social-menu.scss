@@ -2,16 +2,20 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  li { display: inline-block; }
 }
 
 .icon {
   display: inline-block;
+  width: 5rem;
+  height: 5rem;
 
-  .linkedin {
-
+  &.linkedin {
+    background: url('../../../static/images/icons/linkedIn.png') no-repeat 0 0;
   }
 
-  .github {
-
+  &.github {
+    background: url('../../../static/images/icons/github.png') no-repeat 0 0;
   }
 }
