@@ -1,17 +1,27 @@
+.social-title {
+  margin: 0 0 1rem;
+  padding-top: 3.5rem;
+}
+
 .social-menu {
   margin: 0;
   padding: 0;
   list-style: none;
 
-  li { display: inline-block; }
+  li {
+    display: inline-block;
+    padding-right: 2.5rem;
+  }
 }
 
+// Icons
 .icon {
   display: inline-block;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 3.4rem;
 
   &.linkedin {
+    padding-top: 0.2rem;
     background: url('../../../static/images/icons/linkedIn.png') no-repeat 0 0;
   }
 

@@ -15,6 +15,10 @@ export default () => (
         </h1>
         <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         <SocialMenu />
+        <div className="buttons-wrapper">
+          <button type="button" className="btn filled">Portfolio</button>
+          <button type="button" className="btn">CV</button>
+        </div>
       </div>
       <div className="image-wrapper">
         <img src="../../../images/ventsi-main-image.png" alt="Ventsislav Dimitrov" />
