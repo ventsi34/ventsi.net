@@ -11,6 +11,15 @@
   li {
     display: inline-block;
     padding-right: 2.5rem;
+
+    a {
+      opacity: 1;
+      transition: 300ms linear opacity;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
 }
 
