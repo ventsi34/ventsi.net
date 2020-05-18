@@ -1,35 +1,73 @@
 @import '../../styles/variables';
 
 #header {
+  position: relative;
   overflow: hidden;
   height: $header-height;
 
   .logo-wrapper {
+    position: relative;
     float: left;
     width: 12rem;
     padding-top: 3rem;
+    z-index: 2;
   }
 
   nav {
+    position: relative;
     float: right;
-    padding-top: 4rem;
 
     ul {
+      position: relative;
+      min-width: 56.5rem;
+      text-align: center;
       margin: 0;
       padding: 0;
       list-style: none;
+      z-index: 2;
 
       li {
+        position: relative;
         display: inline-block;
-        padding: 0 2.5rem;
 
         a {
-          color: $color-3;
+          display: inline-block;
+          padding: 4rem 2.5rem 3rem;
+          color: $color-2;
           text-decoration: none;
-          font-size: 2rem;
+          font-size: 2.8rem;
           line-height: 2rem;
+        }
+
+        &.active {
+          background-color: $color-2;
+          a { color: $color-3; }
         }
       }
     }
+
+    .hover-stripe {
+      position: absolute;
+      left: 0;
+      bottom: -0.7rem;
+      content: '';
+      display: none;
+      height: 0.1rem;
+      background: $color-2;
+      z-index: 3;
+      transition: all 300ms linear;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 56.5rem;
+    height: 11.9rem;
+    content: '';
+    background: url('../../images/menu-focus.png') no-repeat 0 0;
+    opacity: 0.6;
+    z-index: 1;
   }
 }

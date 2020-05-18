@@ -1,6 +1,6 @@
 .social-title {
   margin: 0 0 1rem;
-  padding-top: 3.5rem;
+  padding-top: 4.5rem;
 }
 
 .social-menu {
@@ -31,10 +31,10 @@
 
   &.linkedin {
     padding-top: 0.2rem;
-    background: url('../../../static/images/icons/linkedIn.png') no-repeat 0 0;
+    background: url('../../images/icons/linkedIn.png') no-repeat 0 0;
   }
 
   &.github {
-    background: url('../../../static/images/icons/github.png') no-repeat 0 0;
+    background: url('../../images/icons/github.png') no-repeat 0 0;
   }
 }

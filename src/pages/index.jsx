@@ -13,7 +13,7 @@ export default () => (
           <br />
           Dimitrov
         </h1>
-        <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <p className="description">Experienced web developer</p>
         <SocialMenu />
         <div className="buttons-wrapper">
           <button type="button" className="btn filled">Portfolio</button>
@@ -21,7 +21,7 @@ export default () => (
         </div>
       </div>
       <div className="image-wrapper">
-        <img src="../../../images/ventsi-main-image.png" alt="Ventsislav Dimitrov" />
+        <img src="../../images/ventsi-main-image.png" alt="Ventsislav Dimitrov" />
       </div>
     </div>
   </Layout>
