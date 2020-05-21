@@ -2,9 +2,11 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `Ventsislav Dimitrov`,
-    description: ``,
-    author: `Ventsislav Dimitrov`,
+    title: "Ventsislav Dimitrov",
+    titleTemplate: "Ventsislav Dimitrov - %s",
+    url: "http://www.ventsi.net",
+    image: "/images/snape.jpg", // It isn't in use
+    description: "Ventsislav Dimitrov is an experienced web developer who can help you with tailored solutions for your software needed",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,6 +33,23 @@ module.exports = {
     },
     'gatsby-plugin-eslint',
     'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        commonmark: true,
+        footnotes: true,
+        pedantic: true,
+        gfm: true,
+        plugins: [],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pagesData`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {

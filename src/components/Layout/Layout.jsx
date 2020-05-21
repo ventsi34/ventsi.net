@@ -5,9 +5,12 @@ import Header from '../Header/Header';
 
 import './layout.scss';
 
-const Layout = ({ children }) => (
+const Layout = ({ title, description, children }) => (
   <>
-    <Header />
+    <Header
+      title={title}
+      description={description}
+    />
     <section id="main-section" className="wrapper">
       { children }
     </section>
@@ -15,7 +18,14 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
   children: PropTypes.node.isRequired,
+};
+
+Layout.defaultProps = {
+  title: null,
+  description: null,
 };
 
 export default Layout;

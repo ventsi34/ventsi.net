@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
+import SEO from '../SEO';
 import './header.scss';
 
 const ACTIVE_MENU_CLASS = 'active';
@@ -43,21 +44,38 @@ class Header extends Component {
   }
 
   render() {
+    const { title, description } = this.props;
     return (
-      <header id="header" className="wrapper">
-        <div className="logo-wrapper">
-          <a href="/"><img src="../../images/ventsi-logo.png" alt="ventsi.net logo" /></a>
-        </div>
-        <nav>
-          <ul ref={this.menu} onMouseLeave={this.setStripToActiveMenu.bind(this)}>
-            <li onMouseEnter={this.setStripToHoverMenu.bind(this)} className={ACTIVE_MENU_CLASS}><a href="/">Home</a></li>
-            <li onMouseEnter={this.setStripToHoverMenu.bind(this)}><a href="/">Portfolio</a></li>
-          </ul>
-          <div ref={this.stripe} className="hover-stripe">&nbsp;</div>
-        </nav>
-      </header>
+      <>
+        <SEO
+          title={title}
+          description={description}
+        />
+        <header id="header" className="wrapper">
+          <div className="logo-wrapper">
+            <a href="/"><img src="../../images/ventsi-logo.png" alt="ventsi.net logo" /></a>
+          </div>
+          <nav>
+            <ul ref={this.menu} onMouseLeave={this.setStripToActiveMenu.bind(this)}>
+              <li onMouseEnter={this.setStripToHoverMenu.bind(this)} className={ACTIVE_MENU_CLASS}><a href="/">Home</a></li>
+              <li onMouseEnter={this.setStripToHoverMenu.bind(this)}><a href="/">Portfolio</a></li>
+            </ul>
+            <div ref={this.stripe} className="hover-stripe">&nbsp;</div>
+          </nav>
+        </header>
+      </>
     );
   }
 }
+
+Header.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+};
+
+Header.defaultProps = {
+  title: null,
+  description: null,
+};
 
 export default Header;
