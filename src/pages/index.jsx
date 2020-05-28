@@ -53,7 +53,7 @@ export default () => (
             </div>
           </div>
           <div className="image-wrapper">
-            <img src="../../images/ventsi-main-image-new.png" alt="Ventsislav Dimitrov" />
+            <img src="../images/ventsi-main-image-new.png" alt="Ventsislav Dimitrov" />
           </div>
         </div>
       </Layout>

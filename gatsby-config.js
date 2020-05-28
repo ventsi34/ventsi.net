@@ -10,13 +10,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, 'src', 'images'),
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -28,7 +21,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: path.join('src', 'images', 'favicon.png'),
+        icon: path.join('static', 'images', 'favicon.png'),
       },
     },
     'gatsby-plugin-eslint',
@@ -47,7 +40,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pagesData`,
+        path: path.join(__dirname, 'src', 'pagesData'),
       },
     },
     {
