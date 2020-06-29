@@ -48,7 +48,7 @@ export default () => (
             />
             <div className="buttons-wrapper">
               {markdownRemark.frontmatter.buttons.map(({ name, link, classes }) => (
-                <Link to={link} className={classes}>{ name }</Link>
+                <Link key={name} to={link} className={classes}>{ name }</Link>
               ))}
             </div>
           </div>

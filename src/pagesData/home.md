@@ -9,13 +9,13 @@ socialText: "Find Me on:"
 socialIcons: 
     - label: "LinkedIn"
       icon: "icon linkedin"
-      link: "#"
+      link: "https://www.linkedin.com/in/ventsislav-dimitrov-77798960"
     - label: "Github"
       icon: "icon github"
-      link: "#"
+      link: "https://github.com/ventsi34"
 buttons:
     - name: 'Portfolio'
-      link: '#'
+      link: 'portfolio'
       classes: 'btn filled'
     - name: 'CV'
       link: '#'

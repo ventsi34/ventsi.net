@@ -17,7 +17,7 @@ class Header extends Component {
     this.setStripToActiveMenu();
   }
 
-  setStripToActiveMenu() {
+  setStripToActiveMenu = () => {
     const currentEl = Object.values(this.menu.current.childNodes)
       .find((el) => el.classList.contains(ACTIVE_MENU_CLASS));
 
@@ -26,7 +26,7 @@ class Header extends Component {
     }
   }
 
-  setStripToHoverMenu(ev) {
+  setStripToHoverMenu = (ev) => {
     const currentEl = ev.target;
 
     if (currentEl) {
@@ -34,7 +34,7 @@ class Header extends Component {
     }
   }
 
-  positionMenuStrip(currentEl) {
+  positionMenuStrip = (currentEl) => {
     const menuDimensions = this.menu.current.getBoundingClientRect();
     const dimensions = currentEl.getBoundingClientRect();
     this.stripe.current.style.width = Math.floor(dimensions.width) + UNITS;
@@ -56,9 +56,9 @@ class Header extends Component {
             <a href="/"><img src="../../images/ventsi-logo.png" alt="ventsi.net logo" /></a>
           </div>
           <nav>
-            <ul ref={this.menu} onMouseLeave={this.setStripToActiveMenu.bind(this)}>
-              <li onMouseEnter={this.setStripToHoverMenu.bind(this)} className={ACTIVE_MENU_CLASS}><a href="/">Home</a></li>
-              <li onMouseEnter={this.setStripToHoverMenu.bind(this)}><a href="/">Portfolio</a></li>
+            <ul ref={this.menu} onMouseLeave={this.setStripToActiveMenu}>
+              <li onMouseEnter={this.setStripToHoverMenu} className={ACTIVE_MENU_CLASS}><a href="/">Home</a></li>
+              <li onMouseEnter={this.setStripToHoverMenu}><a href="/">Portfolio</a></li>
             </ul>
             <div ref={this.stripe} className="hover-stripe">&nbsp;</div>
           </nav>

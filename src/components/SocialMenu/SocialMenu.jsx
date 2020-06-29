@@ -1,15 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './social-menu.scss';
 
-const SocialMenu = () => (
+const SocialMenu = ({ menu }) => (
   <>
     <p className="social-title">Find Me on:</p>
     <ul className="social-menu">
-      <li><a href="/"><span className="icon linkedin">&nbsp;</span></a></li>
-      <li><a href="/"><span className="icon github">&nbsp;</span></a></li>
+      { menu.map((el) => (
+        <li key={el.label}>
+          <a href={el.link} rel="noopener noreferrer" target="_blank">
+            <span className={el.icon}>&nbsp;</span>
+          </a>
+        </li>
+      ))}
     </ul>
   </>
 );
+
+SocialMenu.propTypes = {
+  menu: PropTypes.arrayOf(PropTypes.object),
+};
+
+SocialMenu.defaultProps = {
+  menu: [],
+};
 
 export default SocialMenu;
