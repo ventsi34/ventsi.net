@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 import { Layout, SocialMenu } from '../components';
 import './index.scss';
@@ -46,14 +46,9 @@ export default () => (
             <SocialMenu
               menu={markdownRemark.frontmatter.socialIcons}
             />
-            <div className="buttons-wrapper">
-              {markdownRemark.frontmatter.buttons.map(({ name, link, classes }) => (
-                <Link key={name} to={link} className={classes}>{ name }</Link>
-              ))}
-            </div>
           </div>
           <div className="image-wrapper">
-            <img src="../images/ventsi-main-image-new.png" alt="Ventsislav Dimitrov" />
+            <img src="../images/ventsi-image.png" alt="Ventsislav Dimitrov" />
           </div>
         </div>
       </Layout>
