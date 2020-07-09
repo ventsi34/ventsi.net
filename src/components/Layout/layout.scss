@@ -12,3 +12,5 @@
   position: relative;
   height: calc(100vh - #{$header-height});
 }
+
+@import '../../styles/responsive';
