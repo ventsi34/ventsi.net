@@ -4,9 +4,9 @@ pageTitle: "my passion is a web development"
 congrats: "Hello, I'm"
 firstName: "Ventsislav"
 lastName: "Dimitrov"
-description: "An experienced web developer who can help you with tailored solutions for your software needed"
+description: "An experienced web developer who can help you with tailored solutions for your needs"
 socialText: "Find Me on:"
-socialIcons: 
+socialIcons:
     - label: "LinkedIn"
       icon: "icon linkedin"
       link: "https://www.linkedin.com/in/ventsislav-dimitrov-77798960"

@@ -25,11 +25,11 @@
           text-decoration: none;
           font-size: 2.8rem;
           line-height: 2rem;
-        }
 
-        &.active {
-          background-color: $color-2;
-          a { color: $color-3; }
+          &.active {
+            color: $color-3;
+            background-color: $color-2;
+          }
         }
       }
     }

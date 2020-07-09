@@ -30,7 +30,7 @@ class MainMenu extends Component {
 
   setStripToActiveMenu = () => {
     const currentEl = Object.values(this.menu.current.childNodes)
-      .find((el) => el.classList.contains(ACTIVE_MENU_CLASS));
+      .find((el) => el.firstChild && el.firstChild.classList.contains(ACTIVE_MENU_CLASS));
 
     if (currentEl) {
       this.positionMenuStrip(currentEl);
@@ -62,11 +62,14 @@ class MainMenu extends Component {
           <nav>
             <ul ref={this.menu} onMouseLeave={this.setStripToActiveMenu}>
               { markdownRemark.frontmatter.menu.map((item) => (
-                <li
-                  key={item.title}
-                  onMouseEnter={this.setStripToHoverMenu}
-                >
-                  <Link to={item.link} activeClassName={ACTIVE_MENU_CLASS}>{ item.title }</Link>
+                <li key={item.title}>
+                  <Link
+                    to={item.link}
+                    onMouseEnter={this.setStripToHoverMenu}
+                    activeClassName={ACTIVE_MENU_CLASS}
+                  >
+                    { item.title }
+                  </Link>
                 </li>
               )) }
             </ul>
